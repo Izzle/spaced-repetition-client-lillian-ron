@@ -1,5 +1,5 @@
 # Spaced Repetition Capstone
-t
+
 ## Setup
 
 To setup the application
@@ -14,6 +14,8 @@ Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-re
 ## Running project
 
 This is a `create-react-app` project so `npm start` will start the project in development mode with hot reloading by default.
+
+You will need to create an .env file with a "TOKEN_KEY:"
 
 ## Running the tests
 
