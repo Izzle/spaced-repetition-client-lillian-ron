@@ -1,13 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
-
-* {
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+html {
+  height: 100%;
+  padding: 0;
 }
 
 body {
+  min-height: 100vh;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  background-color: #BAE8F2;
   margin: 0;
   padding: 0;
-  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

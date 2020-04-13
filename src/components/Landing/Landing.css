@@ -1,4 +1,4 @@
-.sign-up-container {
+.title-card{
   background-color: #FFFFFF;
   border: 1px solid black;
   border-radius: 25px;
@@ -11,48 +11,42 @@
   text-align: center;
 }
 
-input {
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 20px 0;
-  max-width: 300px;
-  width: 100%;
-}
-
-.input-container {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  text-align: left;
-}
-
-.sign-up-button-container {
-  align-items: center;
+.login-buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: auto;
   text-align: center;
-}
-
-
-.sign-up-button {
-  background-color: #F6DC73;
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 5px 5px grey;
-  margin: 20px;
-  padding: 10px 50px;
   width: fit-content;
 }
 
-.sign-up-button:hover {
+
+.sign, .log{
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px grey;
+  color: black;
+  margin: 20px;
+  padding: 10px 50px;
+  text-decoration: none;
+}
+
+.sign {
+  background-color: #FAB7C8;
+}
+
+.sign:hover {
   background-color: #FFFFFF;
+  cursor: pointer;
   transition: 0.4s;
 }
 
-.sign-up-button-container > a {
-  color: #000;
+.log {
+  background-color: #F6DC73;
 }
-.sign-up-button-container > a:hover {
-  color: #5BBEBD;
+
+.log:hover {
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.4s;
 }

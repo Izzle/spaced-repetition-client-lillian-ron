@@ -1,0 +1,92 @@
+nav {
+  background-color: #5BBEBD;
+  box-shadow: 5px 5px grey;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.nav-right {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.title-link {
+  font-size: 15pt;
+  margin: 0;
+  text-shadow: 2px 2px 0px grey;
+}
+
+.title-link > a {
+  color: #FAB7C8; 
+}
+
+.title-link > a, .logout, .dashboard, .login, .reg{
+  text-decoration: none;
+}
+
+.login {
+  background-color: #F6DC73;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px grey;
+  color: black;
+  padding: 2px 5px;
+  margin-right: 5px;
+  width: fit-content;
+}
+
+.login:hover {
+  background-color: #FFFFFF;
+  transition: 0.4s;
+}
+
+.reg {
+  background-color: #FAB7C8;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px grey;
+  color: black;
+  padding: 2px 5px;
+  margin-left: 5px;
+  width: fit-content;
+}
+
+.reg:hover {
+  background-color: #FFFFFF;
+  transition: 0.4s;
+}
+
+.dashboard {
+  background-color: #F6DC73;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px grey;
+  color: black;
+  padding: 2px 5px;
+  margin-right: 5px;
+  width: fit-content;
+}
+
+.dashboard:hover {
+  background-color: #FFFFFF;
+  transition: 0.4s;
+}
+
+.logout{
+  background-color: #FAB7C8;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px grey;
+  color: black;
+  padding: 2px 5px;
+  margin-left: 5px;
+  width: fit-content;
+}
+
+.logout:hover {
+  background-color: #FFFFFF;
+  transition: 0.4s;
+}
