@@ -12,7 +12,7 @@
 */
 describe(`User story: Register an account`, function() {
   it('on first load, directs me to the registration page', () => {
-    cy.visit('/')
+    cy.visit('/register')
     cy.url()
       .should('eq', `${Cypress.config().baseUrl}/register`)
 

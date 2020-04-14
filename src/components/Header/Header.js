@@ -43,16 +43,18 @@ class Header extends Component {
 
   render() {
     return (
-      <nav>
-        <h1 className='title-link'>
-          <Link to='/'>
-            ひらがな
-          </Link>
-        </h1>
-        {TokenService.hasAuthToken()
-          ? this.renderLogoutLink()
-          : this.renderLoginLink()}
-      </nav>
+      <header>
+        <nav>
+            <h1 className='title-link'>
+            <Link to='/'>
+                ひらがな
+            </Link>
+            </h1>
+            {TokenService.hasAuthToken()
+            ? this.renderLogoutLink()
+            : this.renderLoginLink()}
+        </nav>
+      </header>
     );
   }
 }

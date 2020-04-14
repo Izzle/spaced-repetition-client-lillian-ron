@@ -23,9 +23,9 @@ import * as helpers from '../support/helpers'
 */
 describe(`User story: Login`, function() {
   it(`has navigation to login page in nav and form`, () => {
-    cy.visit('/')
+    cy.visit('/register')
 
-    cy.get('header nav').within($nav => {
+    cy.get('nav').within($nav => {
       cy.get('a[href="/login"]')
         .should('be.visible')
         .and('have.text', 'Login')
@@ -45,7 +45,7 @@ describe(`User story: Login`, function() {
     cy.visit('/login')
       .get('a[href="/register"]')
       .should('be.visible')
-      .and('have.text', 'Sign up')
+      .and('have.text', 'Sign upNot a user? Sign up here!')
   })
 
   it('displays the login page', () => {
@@ -160,7 +160,7 @@ describe(`User story: Login`, function() {
         .as('languageRequest')
     })
 
-    it(`stores token in localStorage and redirects to /`, () => {
+    it(`stores token in localStorage and redirects to /dashboard`, () => {
       const loginUser = {
         username: 'username',
         password: 'password',
@@ -185,7 +185,7 @@ describe(`User story: Login`, function() {
           })
 
         cy.url()
-          .should('eq', `${Cypress.config().baseUrl}/`)
+          .should('eq', `${Cypress.config().baseUrl}/dashboard`)
       })
     })
 
@@ -194,12 +194,12 @@ describe(`User story: Login`, function() {
 
       cy.get('header').within($header => {
         cy.contains('Test name of user').should('exist')
-        cy.get('nav a')
+        cy.get('.logout')
           .should('have.length', 1)
           .and('have.text', 'Logout')
           .and('have.attr', 'href', '/login')
 
-        cy.get('nav a')
+        cy.get('.logout')
           .click()
           .url()
           .should('eq', `${Cypress.config().baseUrl}/login`)

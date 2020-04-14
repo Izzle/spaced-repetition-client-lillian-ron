@@ -1,0 +1,10 @@
+// Use this file when testing the live server
+// remove comments and rename it to 'cypress.json'
+{
+  "baseUrl": "https://learn-hiragana.now.sh",
+  "env": {
+    "API_ENDPOINT": "https://evening-bayou-01801.herokuapp.com/api",
+    "TOKEN_KEY": "super_secret_key"
+  },
+  "chromeWebSecurity": false
+}
