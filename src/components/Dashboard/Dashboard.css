@@ -23,6 +23,11 @@
     text-align: center;
 }
 
+.word-list {
+    list-style-type: none;
+    padding: 0;
+}
+
 .practice-Link-container {
     align-items: center;
     display: flex;

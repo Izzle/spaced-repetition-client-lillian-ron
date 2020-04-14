@@ -4,9 +4,9 @@ import './DashboardWord.css';
 export default function DashboardWord(props) {
 
     return(
-        <div>
+        <li>
             <p>{props.original}</p>
             <p>Times right: {props.corrCount} Times wrong: {props.incorrCount}</p>
-        </div>
+        </li>
     );
 }  

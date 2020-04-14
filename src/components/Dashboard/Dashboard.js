@@ -52,6 +52,7 @@ export default class Dashboard extends Component{
                     {totalScore}
                     <div className="word-card">
                       <h3>Whats next to practice:</h3>
+                      <ul className="word-list">
                         {words.map((word, idx )=> {
                             return <DashboardWord
                                 key={idx}
@@ -61,6 +62,7 @@ export default class Dashboard extends Component{
                                 word={word}
                             />
                         })}
+                        </ul>
                     </div>
                 </div>
 
