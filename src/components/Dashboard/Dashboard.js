@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../Button/Button';
 import './Dashboard.css';
 import DashboardWord from '../DashboardWord/DashboardWord';
 import LangService from '../../services/lang-service';
