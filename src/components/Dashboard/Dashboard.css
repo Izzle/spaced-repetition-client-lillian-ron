@@ -23,6 +23,14 @@
     text-align: center;
 }
 
+.practice-button-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 .practice-button {
     background-color: #F6DC73;
     border: 1px solid black;
@@ -31,6 +39,7 @@
     margin: 20px;
     padding: 10px 50px;
     width: fit-content;
+    
 }
 
 .practice-button:hover {

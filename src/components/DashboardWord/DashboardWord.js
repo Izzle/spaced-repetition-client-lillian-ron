@@ -2,6 +2,7 @@ import React from 'react';
 import './DashboardWord.css';
 
 export default function DashboardWord(props) {
+
     return(
         <div>
             <p>Japanese word here</p>

@@ -2,13 +2,16 @@ import React, {Component} from 'react';
 import Button from '../Button/Button';
 import './Dashboard.css';
 import DashboardWord from '../DashboardWord/DashboardWord';
+import LangService from '../../services/lang-service';
 
 export default class Dashboard extends Component{
 
     state = { error: null}
 
     componentDidMount() {
-
+        LangService.getLanguage()
+          .then(console.log)
+          .catch(console.log);
     }
 
     render() {
@@ -21,7 +24,7 @@ export default class Dashboard extends Component{
 
                 <div className="main-card">
                     <h1>Learn LANGUAGE-NAME-HERE!</h1>
-                    <p>ひらがなを習う</p>
+                    <p>ひらがなを習おう!</p>
 
                     <div className="practice-button-container">
                         <Button onClick={null} className='practice-button'>
