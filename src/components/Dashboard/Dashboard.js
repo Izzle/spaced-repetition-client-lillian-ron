@@ -3,9 +3,12 @@ import Button from '../Button/Button';
 import './Dashboard.css';
 import DashboardWord from '../DashboardWord/DashboardWord';
 import LangService from '../../services/lang-service';
+import UserContext from '../../contexts/UserContext';
 
 export default class Dashboard extends Component{
 
+    static contextType = UserContext;
+    
     state = { error: null}
 
     componentDidMount() {

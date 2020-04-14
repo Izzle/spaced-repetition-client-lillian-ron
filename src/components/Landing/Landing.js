@@ -23,8 +23,8 @@ class LoginForm extends Component {
         </div>
 
         <div className="title-card">
-          <h2>Learn Hiragana</h2>
-          <p>Some Japanese stuff here! (lillllyyy)</p>
+          <h1>Learn Hiragana the better way!</h1>
+          <p>Learning through spaced repetition will help you remember for good! To get started log in or sign up がんばれ！</p>
         </div>
 
         <div className="login-buttons">
