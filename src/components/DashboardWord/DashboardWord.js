@@ -2,11 +2,11 @@ import React from 'react';
 import './DashboardWord.css';
 
 export default function DashboardWord(props) {
-
+    console.log(props.word);
     return(
         <div>
-            <p>Japanese word here</p>
-           <p>{`Times right: NUM_RIGHT Times wrong: NUM_WRONG`}</p>
+            <p>{props.original}</p>
+            <p>Times right: {props.corrCount} Times wrong: {props.incorrCount}</p>
         </div>
     );
-} 
+}  
