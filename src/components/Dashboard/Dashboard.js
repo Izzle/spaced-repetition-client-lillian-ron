@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import './Dashboard.css';
 import DashboardWord from '../DashboardWord/DashboardWord';
 import LangService from '../../services/lang-service';
 import UserContext from '../../contexts/UserContext';
+
 
 export default class Dashboard extends Component{
 
@@ -23,13 +25,15 @@ export default class Dashboard extends Component{
         const { error } = this.state
         const { language } = this.context
         const { words = [] } = this.context
-        let title
+        let title, totalScore
         if(language) {
             title = <h2>Learn {language.name}</h2>
+            totalScore= <h4>Total correct answers: {language.total_score}</h4>
+            console.log(language)
         } else {
            title = <p> loading </p>
         }
-         
+        
         return(
             <section>
                 <div role='alert'>
@@ -40,13 +44,14 @@ export default class Dashboard extends Component{
                     {title}
                     <p>ひらがなを習おう!</p>
 
-                    <div className="practice-button-container">
-                        <Button onClick={null} className='practice-button'>
-                        Start Practicing
-                        </Button>
+                    <div className="practice-Link-container">
+                        <Link to='/learn' className='practice-Link'>
+                            Start Practicing
+                        </Link>
                     </div>
-                    <p>Whats next to pratice:</p>
+                    {totalScore}
                     <div className="word-card">
+                      <h3>Whats next to practice:</h3>
                         {words.map((word, idx )=> {
                             return <DashboardWord
                                 key={idx}

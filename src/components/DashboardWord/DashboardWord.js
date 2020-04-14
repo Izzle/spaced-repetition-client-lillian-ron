@@ -2,7 +2,7 @@ import React from 'react';
 import './DashboardWord.css';
 
 export default function DashboardWord(props) {
-    console.log(props.word);
+
     return(
         <div>
             <p>{props.original}</p>

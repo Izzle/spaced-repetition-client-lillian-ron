@@ -25,7 +25,7 @@ describe(`User story: User's dashboard`, function() {
   })
 
   beforeEach(() => {
-    cy.login().visit('/')
+    cy.login().visit('/dashboard')
   })
 
   it('has h2 with title, total score, subtitle and link', () => {
@@ -42,10 +42,10 @@ describe(`User story: User's dashboard`, function() {
 
         cy.get('a')
           .should('have.attr', 'href', '/learn')
-          .and('have.text', 'Start practicing')
+          .and('have.text', 'Start Practicing')
 
         cy.get('h3')
-          .should('have.text', 'Words to practice')
+          .should('have.text', 'Whats next to practice:')
       })
     })
   })
