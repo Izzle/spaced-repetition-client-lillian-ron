@@ -1,7 +1,13 @@
-.span-incorrect-word, .span-correct-word{
-
+.p-incorrect-word {
+    margin-bottom: 30px;
 }
 
-.span-incorrect-word {
-    padding-left: 25px;
+@media only screen and (min-width: 770px) {
+    p {
+        display: inline-block;
+    }
+    
+    .p-incorrect-word {
+        padding-left: 50px;
+    }
 }

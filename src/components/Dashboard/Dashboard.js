@@ -29,7 +29,6 @@ export default class Dashboard extends Component{
         if(language) {
             title = <h2>Learn {language.name}</h2>
             totalScore= <h4>Total correct answers: {language.total_score}</h4>
-            console.log(language)
         } else {
            title = <p> loading </p>
         }

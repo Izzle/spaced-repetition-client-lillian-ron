@@ -11,6 +11,10 @@ nav {
   flex: 1;
   align-items: center;
   justify-content: flex-end;
+} 
+
+.nav-right > span {
+  padding-right: 10px;
 }
 
 .title-link {
@@ -59,7 +63,7 @@ nav {
   transition: 0.4s;
 }
 
-.dashboard {
+.logout {
   background-color: #F6DC73;
   border: 1px solid black;
   border-radius: 5px;
@@ -70,12 +74,12 @@ nav {
   width: fit-content;
 }
 
-.dashboard:hover {
+.logout:hover {
   background-color: #FFFFFF;
   transition: 0.4s;
 }
 
-.logout{
+.dashboard {
   background-color: #FAB7C8;
   border: 1px solid black;
   border-radius: 5px;
@@ -86,7 +90,13 @@ nav {
   width: fit-content;
 }
 
-.logout:hover {
+.dashboard:hover {
   background-color: #FFFFFF;
   transition: 0.4s;
+}
+
+@media only screen and (max-width: 450px) {
+  .title-link {
+    display: none;
+  }
 }

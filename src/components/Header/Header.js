@@ -40,15 +40,15 @@ class Header extends Component {
     )
   }
 
-
   render() {
     return (
       <header>
         <nav>
             <h1 className='title-link'>
-            <Link to='/'>
-                ひらがな
-            </Link>
+              {TokenService.hasAuthToken()
+                ? <Link to='/dashboard'> ひらがな </Link>
+                : <Link to='/'> ひらがな </Link>
+              }
             </h1>
             {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
