@@ -10,3 +10,37 @@
     padding: 10px 35px;
     text-align: center;
   }
+
+.word-card {
+    background-color: #F8D7DE;
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 5px 5px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 35px;
+    text-align: center;
+}
+
+.practice-button {
+    background-color: #F6DC73;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px grey;
+    margin: 20px;
+    padding: 10px 50px;
+    width: fit-content;
+}
+
+.practice-button:hover {
+    background-color: #FFFFFF;
+    transition: 0.4s;
+}
+
+.practice-button-container > a {
+    color: #000;
+}
+.practice-button-container > a:hover {
+    color: #5BBEBD;
+}
