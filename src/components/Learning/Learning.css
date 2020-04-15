@@ -11,6 +11,10 @@
     text-align: center;
   }
 
+  .learn-card-word > h4 {
+    font-size: 50px;
+  }
+
   .learn-button {
     background-color: #5BBEBD;
     border: 1px solid black;
@@ -29,6 +33,9 @@
   .learn-guess-form {
       display: flex;
       flex-direction: column;
-      
       align-items: center;
+  }
+
+  .learn-guess-label {
+    margin-top: 40px;
   }

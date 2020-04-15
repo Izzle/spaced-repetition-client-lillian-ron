@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Learning.css';
 import Word from '../Word/Word';
-import { Input } from '../Form/Form';
+import { Input, Label } from '../Form/Form';
 import Button from '../Button/Button';
 import LangService from '../../services/lang-service';
 import UserContext from '../../contexts/UserContext';
@@ -33,7 +33,7 @@ export default class Learning extends Component{
             content = (<>
             <h2>What's this character?</h2>
             
-            <section className="word-card">
+            <section className="word-card learn-card-word">
                 <Word 
                 original={currentWord.nextWord}
                 corrCount={currentWord.wordCorrectCount}
@@ -42,15 +42,15 @@ export default class Learning extends Component{
             </section>
 
             <form className="learn-guess-form">
+                <Label htmlFor="learn-guess-input" className="learn-guess-label">Answer:</Label>
                 <Input 
                   id='learn-guess-input'
                   name='guess'
                   type='text'
-                  placeholder=' Answer'
                   required
                   />
                 <Button type='submit' className='learn-button'>
-                    Submit Answer
+                    Submit
                 </Button>
                  
             </form>
