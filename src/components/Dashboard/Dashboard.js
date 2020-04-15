@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
-import DashboardWord from '../DashboardWord/DashboardWord';
+import Word from '../Word/Word';
 import LangService from '../../services/lang-service';
 import UserContext from '../../contexts/UserContext';
 
@@ -52,13 +52,12 @@ export default class Dashboard extends Component{
                       <h3>Whats next to practice:</h3>
                       <ul className="word-list">
                         {words.map((word, idx )=> {
-                            return <DashboardWord
+                            return <li><Word
                                 key={idx}
                                 original={word.original}
                                 corrCount={word.correct_count}
                                 incorrCount={word.incorrect_count}
-                                word={word}
-                            />
+                            /></li>
                         })}
                         </ul>
                     </div>

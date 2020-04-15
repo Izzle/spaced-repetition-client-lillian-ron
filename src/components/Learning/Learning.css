@@ -1,0 +1,34 @@
+.main-card{
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 5px 5px grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10%;
+    padding: 10px 35px;
+    text-align: center;
+  }
+
+  .learn-button {
+    background-color: #5BBEBD;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px grey;
+    margin: 20px;
+    padding: 10px 50px;
+    width: fit-content;
+  }
+  
+  .learn-button:hover {
+    background-color: #FFFFFF;
+    transition: 0.4s;
+  }
+
+  .learn-guess-form {
+      display: flex;
+      flex-direction: column;
+      
+      align-items: center;
+  }
