@@ -54,7 +54,7 @@ export default class Learning extends Component{
                 </Button>
                  
             </form>
-            <h3>Total correct answers: {currentWord.totalScore}</h3>
+            <h3>Total score is: {currentWord.totalScore}</h3>
             </>)
         } else {
             content = <p> loading... </p>

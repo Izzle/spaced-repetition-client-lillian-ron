@@ -40,7 +40,7 @@ describe(`User story: Presented with word`, function() {
         cy.get('h3').eq(0)
           .should(
             'have.text',
-            `Your total score is: ${languageHeadFixture.totalScore}`,
+            `Total score is: ${languageHeadFixture.totalScore}`,
           )
       })
   })
@@ -56,7 +56,7 @@ describe(`User story: Presented with word`, function() {
         .and('have.attr', 'required', 'required')
 
       cy.get('button[type=submit]')
-        .should('have.text', 'Submit your answer')
+        .should('have.text', 'Submit Answer')
     })
   })
 
@@ -70,11 +70,11 @@ describe(`User story: Presented with word`, function() {
         cy.root()
           .should(
             'contain',
-            `You have answered this word correctly ${languageHeadFixture.wordCorrectCount} times.`,
+            `Times right: ${languageHeadFixture.wordCorrectCount}`,
           )
           .and(
             'contain',
-            `You have answered this word incorrectly ${languageHeadFixture.wordIncorrectCount} times.`,
+            `Times wrong: ${languageHeadFixture.wordIncorrectCount}`,
           )
       })
     })
