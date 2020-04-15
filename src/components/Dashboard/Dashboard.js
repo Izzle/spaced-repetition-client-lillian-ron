@@ -27,7 +27,7 @@ export default class Dashboard extends Component{
         let title, totalScore
         if(language) {
             title = <h2>Learn {language.name}</h2>
-            totalScore= <h4>Total correct answers: {language.total_score}</h4>
+            totalScore= <h3>Total correct answers: {language.total_score}</h3>
         } else {
            title = <p> loading </p>
         }
