@@ -7,10 +7,12 @@ const UserContext = React.createContext({
   user: {},
   language: {},
   words: [],
+  currentWord: {},
   error: null,
   setError: () => {},
   clearError: () => {},
   setLangWords: () => {},
+  setCurrentWord: () => {},
   setUser: () => {},
   processLogin: () => {},
   processLogout: () => {},
@@ -66,13 +68,17 @@ export class UserProvider extends Component {
     })
   }
 
-  setLanguage = language => {
-    this.setState({ language })
+  setCurrentWord = currentWord => {
+      this.setState({ currentWord })
   }
+  
+  // setLanguage = language => {
+  //   this.setState({ language })
+  // }
 
-  setWords = words => {
-    this.setState({ words })
-  }
+  // setWords = words => {
+  //   this.setState({ words })
+  // }
 
   setUser = user => {
     this.setState({ user })
@@ -124,12 +130,14 @@ export class UserProvider extends Component {
       user: this.state.user,
       language: this.state.language,
       words: this.state.words,
+      currentWord: this.state.currentWord,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setLangWords: this.setLangWords,
-      setLanguage: this.setLanguage,
-      setWords: this.setWords,
+      setCurrentWord: this.setCurrentWord,
+      // setLanguage: this.setLanguage,
+      // setWords: this.setWords,
       setUser: this.setUser,
       processLogin: this.processLogin,
       processLogout: this.processLogout,
