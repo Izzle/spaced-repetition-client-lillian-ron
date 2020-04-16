@@ -9,7 +9,7 @@ export default class Learning extends Component{
 
     static contextType = UserContext
 
-    state = { error: null}
+    state = { error: null }
 
     componentDidMount(){
         LangService.getLanguageHead()
@@ -39,7 +39,7 @@ export default class Learning extends Component{
         if(answerResponse !== null){
             responseCard = <ResponseCard />
         } else {
-            responseCard = <p>Loading...</p>
+            responseCard = <p>Loading response...</p>
         }
         return responseCard
     }
@@ -56,13 +56,13 @@ export default class Learning extends Component{
 
     render() {
         const { error } = this.state
-
+        console.log(this.context)
+        //!this logic isnt working b/c answerResponse isnt clearing
         let content
-        if(this.context.answerResponse == {}) {
-            content = this.renderResponseCard()
-        } else {
-            
+        if(!this.context.answerResponse) {
             content = this.renderWordCard()
+        } else {
+            content = this.renderResponseCard()
         } 
 
 

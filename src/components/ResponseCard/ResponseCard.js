@@ -12,29 +12,48 @@ export default class ResponseCard extends React.Component {
   handleNextClick(e) {
     e.preventDefault()
     this.context.clearAnswerResponse()
-    console.log(this.context.answerResponse)
-    console.log(this.context.currentWord)
-    //do another get
   }
 
+
   render(){
-    const { currentWord } = this.context
     const { error } = this.state
+
+    let content
+    if(this.context.answerResponse){
+      if(this.context.answerResponse.isCorrect === true) {
+        content = (
+          <>
+            <h2>せいかい! You got it right!</h2>
+            <section className="word-card">
+              <p>The right translation for {this.context.answerResponse.nextWord} was {this.context.answerResponse.answer} and you chose {this.context.guess}!</p>
+            </section>
+          </>
+        )
+      } else if(this.context.answerResponse.isCorrect === false){
+        content = (
+          <>
+            <h2>ちがう...　Not quite!</h2>
+            <section className="word-card">
+              <p>The right translation for {this.context.answerResponse.nextWord} was {this.context.answerResponse.answer} and you chose {this.context.guess}!</p>
+            </section>
+          </>
+        )
+      }
+    } else {
+      content = <h2>Loading...</h2>
+    }
+
     return(
       <>
-      <h2>Response</h2>
-
       <div role='alert'>
         {error && <p>{error}</p>}
       </div>
       
-      <section className="word-card">
-        <p>response ResponseCard</p>
-      </section>
+      {content}
 
-        <button onClick={e => this.handleNextClick(e)}>
-          Next
-        </button>
+      <button className="next-button" onClick={e => this.handleNextClick(e)}>
+        Next
+      </button>
   </>
     )
   }

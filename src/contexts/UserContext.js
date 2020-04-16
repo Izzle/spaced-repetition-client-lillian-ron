@@ -8,7 +8,8 @@ const UserContext = React.createContext({
   language: {},
   words: [],
   currentWord: {},
-  answerResponse: {},
+  answerResponse: null,
+  guess: null,
   error: null,
   setError: () => {},
   clearError: () => {},
@@ -16,6 +17,7 @@ const UserContext = React.createContext({
   setCurrentWord: () => {},
   setAnswerResponse: () => {},
   clearAnswerResponse: () => {},
+  setGuess: () => {},
   setUser: () => {},
   processLogin: () => {},
   processLogout: () => {},
@@ -83,6 +85,10 @@ export class UserProvider extends Component {
     this.setState({ answerResponse: null })
   }
 
+  setGuess = guess => {
+    this.setState({ guess })
+  }
+
   setUser = user => {
     this.setState({ user })
   }
@@ -134,7 +140,8 @@ export class UserProvider extends Component {
       language: this.state.language,
       words: this.state.words,
       currentWord: this.state.currentWord,
-      answerResponse: this.state.currentWord,
+      answerResponse: this.state.answerResponse,
+      guess: this.state.guess,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
@@ -142,6 +149,7 @@ export class UserProvider extends Component {
       setCurrentWord: this.setCurrentWord,
       setAnswerResponse: this.setAnswerResponse,
       clearAnswerResponse: this.clearAnswerResponse,
+      setGuess: this.setGuess,
       setUser: this.setUser,
       processLogin: this.processLogin,
       processLogout: this.processLogout,

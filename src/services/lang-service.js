@@ -32,9 +32,10 @@ const LangService = {
     return fetch(`${config.API_ENDPOINT}/language/guess`, {
       method: 'POST',
       headers: {
-        'authorization': `bearer ${TokenService.getAuthToken()}`
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,  
       },
-      body: JSON.stringify({ guess })
+      body: JSON.stringify( guess )
     })
     .then(res =>
       (!res.ok)

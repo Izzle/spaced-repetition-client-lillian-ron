@@ -14,14 +14,17 @@ export default class WordCard extends React.Component {
   handleGuessSubmit(e) {
     e.preventDefault()
     
-    const guess = e.target.guess.value
-  
+    let guess = e.target.guess.value
+
+    this.context.setGuess(guess)
+    console.log(this.context.guess)
     LangService.postGuess({
-        guess
+        guess: guess
       })
         .then(res => {
-            guess.value = ''
-            this.context.setAnswerResponse(res)
+          console.log(res)
+            guess = ''
+           this.context.setAnswerResponse(res)
         })
         .catch(res => {
             this.setState({ error: res.error })
