@@ -13,7 +13,7 @@ export default class Learning extends Component{
     state = { error: null}
 
     componentDidMount(){
-        LangService.getNextWord()
+        LangService.getLanguageHead()
           .then(this.context.setCurrentWord)
           .catch(res => {
             this.setState({ error: res.error })
@@ -26,40 +26,51 @@ export default class Learning extends Component{
     // incorrCount={word.incorrect_count} word.incorrect_count -> wordIncorrectCount
     // 
 
-    renderGuessForm() {
+    renderWordCard() {
         const { currentWord } = this.context
-        let content 
+        let wordCard
         if(currentWord) {
-            content = (<>
-            <h2>What's this character?</h2>
-            
-            <section className="word-card">
-                <Word 
-                original={currentWord.nextWord}
-                corrCount={currentWord.wordCorrectCount}
-                incorrCount={currentWord.wordIncorrectCount}
-                />
-            </section>
+            wordCard = (
+                <>
+                    <h2>What's this character?</h2>
+                    
+                    <section className="word-card">
+                        <Word 
+                        original={currentWord.nextWord}
+                        corrCount={currentWord.wordCorrectCount}
+                        incorrCount={currentWord.wordIncorrectCount}
+                        />
+                    </section>
 
-            <form className="learn-guess-form">
-                <Input 
-                  id='learn-guess-input'
-                  name='guess'
-                  type='text'
-                  placeholder=' Answer'
-                  required
-                  />
-                <Button type='submit' className='learn-button'>
-                    Submit Answer
-                </Button>
-                 
-            </form>
-            <h3>Total score is: {currentWord.totalScore}</h3>
-            </>)
+                    <form className="learn-guess-form">
+                        <Input 
+                        id='learn-guess-input'
+                        name='guess'
+                        type='text'
+                        placeholder=' Answer'
+                        required
+                        />
+                        <Button type='submit' className='learn-button'>
+                            Submit Answer
+                        </Button>
+                        
+                    </form>
+                </>
+            )
         } else {
-            content = <p> loading... </p>
+            wordCard = <p> loading... </p>
         }
-        return content
+        return wordCard
+    }
+
+    renderTotalScore() {
+        let totalScore 
+        if(this.context.currentWord) {
+            totalScore = <h3>Total score is: {this.context.currentWord.totalScore}</h3> 
+        } else {
+            totalScore = <h3>Total score is: Loading...</h3>
+        }
+        return totalScore
     }
 
     render() {
@@ -71,7 +82,8 @@ export default class Learning extends Component{
             </div>
 
             <div className="main-card">
-            {this.renderGuessForm()}
+            {this.renderWordCard()}
+            {this.renderTotalScore()}
             </div>
             
         </section>);

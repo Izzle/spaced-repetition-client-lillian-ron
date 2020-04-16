@@ -15,7 +15,7 @@ const LangService = {
           : res.json()
       )
   },
-  getNextWord() {
+  getLanguageHead() {
     return fetch(`${config.API_ENDPOINT}/language/head`, {
       method: 'GET',
       headers: {
