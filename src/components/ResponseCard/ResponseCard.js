@@ -67,7 +67,7 @@ export default class ResponseCard extends React.Component {
       {content}
 
       <button className="next-button" onClick={e => this.handleNextClick(e)}>
-        Next
+        Try another character
       </button>
 
       {this.renderTotalScore()}
