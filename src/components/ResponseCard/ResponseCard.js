@@ -12,6 +12,21 @@ export default class ResponseCard extends React.Component {
   handleNextClick(e) {
     e.preventDefault()
     this.context.clearAnswerResponse()
+    LangService.getLanguageHead()
+      .then(this.context.setCurrentWord)
+      .catch(res => {
+        this.setState({ error: res.error })
+      })
+  }
+
+  renderTotalScore() {
+    let totalScore 
+    if(this.context.answerResponse) {
+        totalScore = <h3>Total score is: {this.context.answerResponse.totalScore}</h3> 
+    } else {
+        totalScore = <h3>Total score is: Loading...</h3>
+    }
+    return totalScore
   }
 
 
@@ -54,6 +69,8 @@ export default class ResponseCard extends React.Component {
       <button className="next-button" onClick={e => this.handleNextClick(e)}>
         Next
       </button>
+
+      {this.renderTotalScore()}
   </>
     )
   }

@@ -31,6 +31,16 @@ export default class WordCard extends React.Component {
         })
   }
 
+  renderTotalScore() {
+    let totalScore 
+    if(this.context.currentWord) {
+        totalScore = <h3>Total score is: {this.context.currentWord.totalScore}</h3> 
+    } else {
+        totalScore = <h3>Total score is: Loading...</h3>
+    }
+    return totalScore
+  }
+
     render(){
       const { currentWord } = this.context
       const { error } = this.state
@@ -63,6 +73,8 @@ export default class WordCard extends React.Component {
           </Button>
           
       </form>
+
+      {this.renderTotalScore()}
   </>
     )
   }

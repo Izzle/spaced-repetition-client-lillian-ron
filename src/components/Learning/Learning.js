@@ -44,20 +44,9 @@ export default class Learning extends Component{
         return responseCard
     }
 
-    renderTotalScore() {
-        let totalScore 
-        if(this.context.currentWord) {
-            totalScore = <h3>Total score is: {this.context.currentWord.totalScore}</h3> 
-        } else {
-            totalScore = <h3>Total score is: Loading...</h3>
-        }
-        return totalScore
-    }
-
     render() {
         const { error } = this.state
-        console.log(this.context)
-        //!this logic isnt working b/c answerResponse isnt clearing
+
         let content
         if(!this.context.answerResponse) {
             content = this.renderWordCard()
@@ -73,7 +62,7 @@ export default class Learning extends Component{
 
             <div className="main-card">
             {content}
-            {this.renderTotalScore()}
+            
             </div>
             
         </section>);
