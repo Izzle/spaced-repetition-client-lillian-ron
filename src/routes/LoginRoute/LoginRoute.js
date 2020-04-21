@@ -17,11 +17,11 @@ class LoginRoute extends Component {
 
   render() {
     return (
-      <section>
+      <React.Fragment>
         <LoginForm
           onLoginSuccess={this.handleLoginSuccess}
         />
-      </section>
+      </React.Fragment>
     );
   }
 }
