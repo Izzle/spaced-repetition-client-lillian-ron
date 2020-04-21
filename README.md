@@ -1,5 +1,8 @@
 # Spaced Repetition Capstone
 
+## API Repo
+https://github.com/Izzle/spaced-repetition-api-lillian-ron
+
 ## Setup
 
 To setup the application
