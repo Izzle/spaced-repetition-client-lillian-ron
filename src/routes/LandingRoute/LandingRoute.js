@@ -4,9 +4,9 @@ import Landing from '../../components/Landing/Landing'
 class LandingRoute extends Component {
   render() {
     return (
-      <section>
-        <Landing/>
-      </section>
+      <React.Fragment>
+         <Landing/>
+      </React.Fragment>
     );
   }
 }

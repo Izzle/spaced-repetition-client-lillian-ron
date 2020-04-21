@@ -15,11 +15,11 @@ class RegistrationRoute extends Component {
 
   render() {
     return (
-      <section>
+      <React.Fragment>
         <RegistrationForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
         />
-      </section>
+      </React.Fragment>
     );
   }
 }
